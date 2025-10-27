@@ -1,54 +1,39 @@
-## 1.5 Model Selection Process
-
-<a href="https://www.youtube.com/watch?v=OH_R0Sl9neM&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=6"><img src="images/thumbnail-1-05.jpg"></a>
-
-[Slides](https://www.slideshare.net/AlexeyGrigorev/ml-zoomcamp-15-model-selection-process)
+## 1.5 Proceso de Selección de Modelos
 
 
-## Notes
+## Notas
 
-### Which model to choose?
+### ¿Qué modelo elegir?
 
-- Logistic regression
-- Decision tree
-- Neural Network
-- Or many others
+- Regresión logística
+- Árbol de decisión
+- Red neuronal
+- O muchos otros
 
-The validation dataset is not used in training. There are feature matrices and y vectors
-for both training and validation datasets. 
-The model is fitted with training data, and it is used to predict the y values of the validation
-feature matrix. Then, the predicted y values (probabilities)
-are compared with the actual y values. 
+El conjunto de validación no se usa en el entrenamiento. Hay matrices de características y vectores y
+tanto para los conjuntos de entrenamiento como de validación. 
+El modelo se ajusta con los datos de entrenamiento, y se usa para predecir los valores y de la matriz
+de características de validación. Luego, los valores y predichos (probabilidades)
+se comparan con los valores y reales. 
 
-**Multiple comparisons problem (MCP):** just by chance one model can be lucky and obtain
-good predictions because all of them are probabilistic. 
+**Problema de comparaciones múltiples (MCP):** simplemente por azar un modelo puede tener suerte y obtener
+buenas predicciones porque todos son probabilísticos. 
 
-The test set can help to avoid the MCP. Obtaining the best model is done with the training and validation datasets, while the test dataset is used for assuring that the proposed best model is the best. 
+El conjunto de prueba puede ayudar a evitar el MCP. La obtención del mejor modelo se realiza con los conjuntos de entrenamiento y validación, mientras que el conjunto de prueba se usa para asegurar que el mejor modelo propuesto es el mejor. 
 
-1. Split datasets in training, validation, and test. E.g. 60%, 20% and 20% respectively 
-2. Train the models
-3. Evaluate the models
-4. Select the best model 
-5. Apply the best model to the test dataset 
-6. Compare the performance metrics of validation and test
+1. Dividir los conjuntos de datos en entrenamiento, validación y prueba. Por ejemplo, 60%, 20% y 20% respectivamente 
+2. Entrenar los modelos
+3. Evaluar los modelos
+4. Seleccionar el mejor modelo 
+5. Aplicar el mejor modelo al conjunto de prueba 
+6. Comparar las métricas de rendimiento de validación y prueba
 
-<u>NB:</u> Note that it is possible to reuse the validation data. After selecting the best model (step 4), the validation and training datasets can be combined to form a single training dataset for the chosen model before testing it on the test set.
+<u>Nota:</u> Es posible reutilizar los datos de validación. Después de seleccionar el mejor modelo (paso 4), los conjuntos de validación y entrenamiento pueden combinarse para formar un único conjunto de entrenamiento para el modelo elegido antes de probarlo en el conjunto de prueba.
 
-<table>
-   <tr>
-      <td>⚠️</td>
-      <td>
-         The notes are written by the community. <br>
-         If you see an error here, please create a PR with a fix.
-      </td>
-   </tr>
-</table>
 
-* [Notes from Peter Ernicke](https://knowmledge.com/2023/09/13/ml-zoomcamp-2023-introduction-to-machine-learning-part-5/)
+## Navegación
 
-## Navigation
-
-* [Machine Learning Zoomcamp course](../)
-* [Lesson 1: Introduction to Machine Learning](./)
-* Previous: [CRISP-DM](04-crisp-dm.md)
-* Next: [Setting up the Environment](06-environment.md)
+* [Curso Machine Learning Zoomcamp](../)
+* [Lección 1: Introducción al Machine Learning](./)
+* Anterior: [CRISP-DM](04-crisp-dm.md)
+* Siguiente: [Configuración del Entorno](06-environment.md)

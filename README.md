@@ -34,3 +34,5 @@ En este curso aprenderás a:
 - ✅ Aplicar técnicas avanzadas de Deep Learning
 - ✅ Desarrollar soluciones end-to-end escalables
 
+🚀  Este curso está basado en el zoomcamp de Machine Learning dictado por Datatalks. Aquí encontrarás el material original del curso: [zoomcamp](https://github.com/datatalks-club/zoomcamp)
+

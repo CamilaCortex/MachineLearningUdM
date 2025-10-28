@@ -157,7 +157,7 @@ Cuando el entorno esté activo, verás `(.venv)` al inicio de tu línea de coman
 Con el entorno activado, instala paquetes usando uv:
 
 ```bash
-uv pip install numpy pandas matplotlib
+uv add numpy pandas matplotlib
 ```
 
 **💡 Ventaja:** uv es mucho más rápido que pip tradicional.

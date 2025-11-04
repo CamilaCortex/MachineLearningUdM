@@ -19,6 +19,6 @@ __pycache__/
 mlruns
 mlflow.db
 backend.db
-*.html
+#*.html
 mlartifacts
 *.txt

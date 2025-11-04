@@ -1,0 +1,60 @@
+# Configuración del Pipeline de Predicción de Duración de Taxis NYC
+
+# MLflow Configuration
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "nyc-taxi-experiment-prefect"
+  
+# Data Configuration
+data:
+  base_url: "https://d37ci6vzurychx.cloudfront.net/trip-data"
+  file_pattern: "green_tripdata_{year}-{month:02d}.parquet"
+  
+  # Data filtering
+  min_duration: 1  # minutes
+  max_duration: 60  # minutes
+  
+  # Feature engineering
+  categorical_features:
+    - "PULocationID"
+    - "DOLocationID"
+  numerical_features:
+    - "trip_distance"
+
+# Model Configuration
+model:
+  type: "xgboost"
+  
+  # XGBoost hyperparameters
+  params:
+    learning_rate: 0.09585355369315604
+    max_depth: 30
+    min_child_weight: 1.060597050922164
+    objective: "reg:squarederror"
+    reg_alpha: 0.018060244040060163
+    reg_lambda: 0.011658731377413597
+    seed: 42
+  
+  # Training configuration
+  num_boost_round: 30
+  early_stopping_rounds: 50
+
+# Prefect Configuration
+prefect:
+  # Task retry configuration
+  retries: 3
+  retry_delay_seconds: 10
+  
+  # Artifacts configuration
+  create_artifacts: true
+  
+# Output Configuration
+output:
+  models_dir: "models"
+  preprocessor_filename: "preprocessor.b"
+  run_id_file: "prefect_run_id.txt"
+
+# Default training period
+default:
+  year: 2023
+  month: 1

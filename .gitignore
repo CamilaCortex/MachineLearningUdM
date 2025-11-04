@@ -20,4 +20,5 @@ mlruns
 mlflow.db
 backend.db
 *.html
-
+mlartifacts
+*.txt

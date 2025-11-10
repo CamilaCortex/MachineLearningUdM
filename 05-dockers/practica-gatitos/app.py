@@ -23,7 +23,7 @@ def home():
     gatito_url = random.choice(GATITOS)
     return render_template('index.html', gatito_url=gatito_url)
 
-@app.route('/health')
+@app.route('/health')  # ping 
 def health():
     """Endpoint de salud para verificar que la app está corriendo"""
     return {'status': 'healthy', 'message': '🐱 Gatitos app is running!'}
